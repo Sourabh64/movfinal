@@ -7,7 +7,7 @@ sns.set()
 import pickle
 from mpl_toolkits.mplot3d import Axes3D
 
-dataset = pd.read_excel(r'C:\Users\Mr.Kulakarni\Desktop\Final_Year_Project\Deployment_flask_master\Deployment_flask_master\movie_metadata1.xlsx')
+dataset = pd.read_excel(r'C:\Users\Admin\Desktop\Deployment_flask_master\movie_metadata1.xlsx')
 
 dataset=dataset.drop(['num_critic_for_reviews','actor_3_name','country','actor_3_facebook_likes','num_user_for_reviews','budget','duration','content_rating','color','aspect_ratio','plot_keywords','facenumber_in_poster','cast_total_facebook_likes','movie_facebook_likes','movie_imdb_link'],axis=1)
 
@@ -124,6 +124,19 @@ y_hat_test=mlr_model.predict(x_test)
 df_pf=pd.DataFrame(y_hat_test,columns=['Predictions'])
 df_pf['Target']=y_test.values
 df_pf.head()
+
+
+
+dir_dict=dict(zip(data_action.director_name,data_action.dir_average))
+
+actor1_dict=dict(zip(data_action.actor_1_name,data_action.act1_average))
+
+actor2_dict=dict(zip(data_action.actor_2_name,data_action.act2_average))
+
+
+
+
+
 
 
 
