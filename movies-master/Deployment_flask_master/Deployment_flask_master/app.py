@@ -18,11 +18,11 @@ def predict():
     '''
     
     if request.method == 'POST': 
-        dir_name=request.form.get('experience')
+        dir_name=request.form.get('director_name')
         dir_score=dir_dict[dir_name]
-        actor1_name= request.form.get('test_score')
+        actor1_name= request.form.get('actor1_name')
         actor1_score=actor1_dict[actor1_name]
-        actor2_name=request.form.get('interview_score')
+        actor2_name=request.form.get('actor2_name')
         actor2_score=actor2_dict[actor2_name]
     #actor_name1=request.args.get('test_score')
    # actor_score1=actor1_dict.get(actor_name1,"0")
@@ -36,7 +36,7 @@ def predict():
 
         output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
