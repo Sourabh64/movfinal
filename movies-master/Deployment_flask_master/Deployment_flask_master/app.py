@@ -2,10 +2,12 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 from model import dir_dict,actor1_dict,actor2_dict
+#from model_adv import dir_adv_dict, actor1_adv_dict, actor2_adv_dict
 
 
 app = Flask(__name__)
 model = pickle.load(open('model1.pkl', 'rb'))
+model_adv = pickle.load(open('model2.pkl', 'rb'))
 
 @app.route('/')
 def home():
