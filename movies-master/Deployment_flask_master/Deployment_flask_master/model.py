@@ -160,38 +160,17 @@ df_adv=df_adv.rename(columns={'imdb_score':'act1_average'})
 data_adventure=pd.merge(data_adventure,df_adv,on='actor_1_name')
 
 
-df_adv = pd.DataFrame(data_action, columns=['actor_2_name', 'imdb_score'])
+df_adv = pd.DataFrame(data_adventure, columns=['actor_2_name', 'imdb_score'])
 df_adv=df_adv.groupby('actor_2_name').mean().reset_index()
 
 df_adv=df_adv.rename(columns={'imdb_score':'act2_average'})
 data_adventure=pd.merge(data_adventure,df_adv,on='actor_2_name')
-
-
-corr = data_adventure.corr()
-ax = sns.heatmap(
-    corr, 
-    vmin=-1, vmax=1, center=0,
-    cmap=sns.diverging_palette(20, 220, n=200),
-    square=True
-)
-ax.set_xticklabels(
-    ax.get_xticklabels(),
-    rotation=45,
-    horizontalalignment='right'
-);
         
 
 dir_rating=data_adventure['dir_average']
 actor1_rating=data_adventure['act1_average']
 actor2_rating=data_adventure['act2_average']
 imdb_score=data_adventure['imdb_score']
-
-
-fig = plt.figure()
-ax = Axes3D(fig)
-ax.scatter(dir_rating, actor1_rating,imdb_score, color='#ef1234')
-# plt.legend()
-plt.show()
 
 
 x_adv=data_adventure.iloc[:, -3:]
@@ -230,3 +209,148 @@ actor1_adv_dict=dict(zip(data_adventure.actor_1_name,data_adventure.act1_average
 
 actor2_adv_dict=dict(zip(data_adventure.actor_2_name,data_adventure.act2_average))
 
+
+
+
+
+data_comedy=dataset.loc[dataset['Comedy']==1]
+data_comedy=data_comedy.drop(['Action', 'Drama', 'Animation', 'Adventure', 'Mystery',
+       'Crime', 'Biography', 'Fantasy', 'Sci-Fi', 'Horror', 'Documentary',
+       'Romance', 'Thriller', 'Family', 'Music', 'Western', 'Musical','History','War'],axis=1)
+data_comedy=data_comedy.sort_values('director_name')
+
+df_com = pd.DataFrame(data_comedy, columns=['director_name', 'imdb_score'])
+df_com=df_com.groupby('director_name').mean().reset_index()
+
+df_com=df_com.rename(columns={'imdb_score':'dir_average'})
+data_comedy=pd.merge(data_comedy,df_com,on='director_name')
+
+
+df_com = pd.DataFrame(data_comedy, columns=['actor_1_name', 'imdb_score'])
+df_com=df_com.groupby('actor_1_name').mean().reset_index()
+
+df_com=df_com.rename(columns={'imdb_score':'act1_average'})
+data_comedy=pd.merge(data_comedy,df_com,on='actor_1_name')
+
+
+df_com = pd.DataFrame(data_comedy, columns=['actor_2_name', 'imdb_score'])
+df_com=df_com.groupby('actor_2_name').mean().reset_index()
+
+df_com=df_com.rename(columns={'imdb_score':'act2_average'})
+data_comedy=pd.merge(data_comedy,df_com,on='actor_2_name')
+
+
+dir_rating=data_comedy['dir_average']
+actor1_rating=data_comedy['act1_average']
+actor2_rating=data_comedy['act2_average']
+imdb_score=data_comedy['imdb_score']
+
+
+x_com=data_comedy.iloc[:, -3:]
+y_com=data_comedy.iloc[:, -5]
+
+from sklearn.model_selection import train_test_split
+x_com_train,x_com_test,y_com_train,y_com_test=train_test_split(x_com,y_com,test_size=0.2,random_state=100)
+
+from sklearn.linear_model import LinearRegression
+mlr_model_com= LinearRegression(fit_intercept=True)
+
+mlr_model_com.fit(x_com_train,y_com_train)
+        
+
+pickle.dump(mlr_model_com, open('model3.pkl','wb'))
+
+# Loading model to compare the results
+model_com = pickle.load(open('model3.pkl','rb'))
+print(model_com.predict([[2, 9, 6]]))
+
+print(mlr_model_com.intercept_) # (PRICE=(-4481.80028058845)+8.65903854)*AREA
+print(mlr_model_com.coef_)#y=c+mx
+
+print(mlr_model_com.score(x_adv_train,y_adv_train))
+
+y_hat_test_com=mlr_model_com.predict(x_com_test)
+df_pf_com=pd.DataFrame(y_hat_test_com,columns=['Predictions'])
+df_pf_com['Target']=y_com_test.values
+df_pf_com.head()
+
+
+
+dir_com_dict=dict(zip(data_comedy.director_name,data_comedy.dir_average))
+
+actor1_com_dict=dict(zip(data_comedy.actor_1_name,data_comedy.act1_average))
+
+actor2_com_dict=dict(zip(data_comedy.actor_2_name,data_comedy.act2_average))
+
+
+
+
+
+data_romance=dataset.loc[dataset['Romance']==1]
+data_romance=data_romance.drop(['Action', 'Drama', 'Animation', 'Adventure', 'Mystery',
+       'Crime', 'Biography', 'Fantasy', 'Sci-Fi', 'Horror', 'Documentary',
+       'Comedy', 'Thriller', 'Family', 'Music', 'Western', 'Musical','History','War'],axis=1)
+data_romance=data_romance.sort_values('director_name')
+
+df_rom = pd.DataFrame(data_romance, columns=['director_name', 'imdb_score'])
+df_rom=df_rom.groupby('director_name').mean().reset_index()
+
+df_rom=df_rom.rename(columns={'imdb_score':'dir_average'})
+data_romance=pd.merge(data_romance,df_rom,on='director_name')
+
+
+df_rom = pd.DataFrame(data_romance, columns=['actor_1_name', 'imdb_score'])
+df_rom=df_rom.groupby('actor_1_name').mean().reset_index()
+
+df_rom=df_rom.rename(columns={'imdb_score':'act1_average'})
+data_romance=pd.merge(data_romance,df_rom,on='actor_1_name')
+
+
+df_rom = pd.DataFrame(data_romance, columns=['actor_2_name', 'imdb_score'])
+df_rom=df_rom.groupby('actor_2_name').mean().reset_index()
+
+df_rom=df_rom.rename(columns={'imdb_score':'act2_average'})
+data_romance=pd.merge(data_romance,df_rom,on='actor_2_name')
+
+
+dir_rating=data_romance['dir_average']
+actor1_rating=data_romance['act1_average']
+actor2_rating=data_romance['act2_average']
+imdb_score=data_romance['imdb_score']
+
+
+x_rom=data_romance.iloc[:, -3:]
+y_rom=data_romance.iloc[:, -5]
+
+from sklearn.model_selection import train_test_split
+x_rom_train,x_rom_test,y_rom_train,y_rom_test=train_test_split(x_rom,y_rom,test_size=0.2,random_state=100)
+
+from sklearn.linear_model import LinearRegression
+mlr_model_rom= LinearRegression(fit_intercept=True)
+
+mlr_model_rom.fit(x_rom_train,y_rom_train)
+        
+
+pickle.dump(mlr_model_com, open('model4.pkl','wb'))
+
+# Loading model to compare the results
+model_rom = pickle.load(open('model4.pkl','rb'))
+print(model_rom.predict([[2, 9, 6]]))
+
+print(mlr_model_rom.intercept_) # (PRICE=(-4481.80028058845)+8.65903854)*AREA
+print(mlr_model_rom.coef_)#y=c+mx
+
+print(mlr_model_rom.score(x_adv_train,y_adv_train))
+
+y_hat_test_rom=mlr_model_rom.predict(x_rom_test)
+df_pf_rom=pd.DataFrame(y_hat_test_rom,columns=['Predictions'])
+df_pf_rom['Target']=y_rom_test.values
+df_pf_rom.head()
+
+
+
+dir_rom_dict=dict(zip(data_romance.director_name,data_romance.dir_average))
+
+actor1_rom_dict=dict(zip(data_romance.actor_1_name,data_romance.act1_average))
+
+actor2_rom_dict=dict(zip(data_romance.actor_2_name,data_romance.act2_average))
