@@ -14,23 +14,20 @@
 
 <body>
  <div class="login">
-	<h1>IMDB Predictor</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="director_name" placeholder="Director Name" required="required" />
-        <input type="text" name="actor1_name" placeholder="Lead Actor" required="required" />
-		<input type="text" name="actor2_name" placeholder="Lead Actor 2" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
+<select id="dynamic_select" onchange="location=this.value;">
+    <option value="" selected>Genre</option>
+    <option value="/act">action</option>
+    <option value="/adv">adventure</option>
+    <option value="/com">Comedy</option>
+    <option value="/rom">Romantic</option>
+   
+    
+</select>
 
  </div>
 
-
 </body>
+
+
 </html>
+
