@@ -31,22 +31,32 @@ def action():
     '''
     For rendering results on HTML GUI
     '''
-    
+    error=None
     if request.method== 'POST':  
         dir_name=request.form.get('director_name')
-        dir_score=dir_dict[dir_name]
+        if(dir_name not in dir_dict):
+            error="Invalid Director name"
+            return render_template('action.html',error=error)
         actor1_name= request.form.get('actor1_name')
-        actor1_score=actor1_dict[actor1_name]
+        if(actor1_name not in actor1_dict):
+            error="Invalid Lead Actor 1 name"
+            return render_template('action.html',error=error)
+        
         actor2_name=request.form.get('actor2_name')
+        if(actor2_name not in actor2_dict):
+            error="Invalid Lead Actor 2 name"
+            return render_template('action.html',error=error)
+        
+        dir_score=dir_dict[dir_name]     
+        actor1_score=actor1_dict[actor1_name]
         actor2_score=actor2_dict[actor2_name]
-    #actor_name1=request.args.get('test_score')
-   # actor_score1=actor1_dict.get(actor_name1,"0")       
-    final_features=np.array([[dir_score,actor1_score,actor2_score]])
-    prediction = model.predict(final_features)
-
-    output = round(prediction[0], 2)
-
-    return render_template('action.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+        final_features=np.array([[dir_score,actor1_score,actor2_score]])
+        prediction = model.predict(final_features)
+        output = round(prediction[0], 2)
+        return render_template('action.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+        
+     
+    
 
 @app.route('/adv')
 def adv():
@@ -60,23 +70,33 @@ def adventure():
     '''
     For rendering results on HTML GUI
     '''
-    
+    error=None
     if request.method== 'POST':  
         dir_name=request.form.get('director_name')
-        dir_score=dir_adv_dict[dir_name]
+        if(dir_name not in dir_adv_dict):
+            error="Invalid Director name"
+            return render_template('adventure.html',error=error)
         actor1_name= request.form.get('actor1_name')
-        actor1_score=actor1_adv_dict[actor1_name]
+        if(actor1_name not in actor1_adv_dict):
+            error="Invalid Lead Actor 1 name"
+            return render_template('adventure.html',error=error)
         actor2_name=request.form.get('actor2_name')
+        if(actor2_name not in actor2_adv_dict):
+            error="Invalid Lead Actor 2 name"
+            return render_template('adventure.html',error=error)
+        
+        dir_score=dir_adv_dict[dir_name]
+        actor1_score=actor1_adv_dict[actor1_name]
         actor2_score=actor2_adv_dict[actor2_name]
+        final_features=np.array([[dir_score,actor1_score,actor2_score]])
+        prediction = model_adv.predict(final_features)
+
+        output = round(prediction[0], 2)
+
+        return render_template('adventure.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+
         
     
-    final_features=np.array([[dir_score,actor1_score,actor2_score]])
-    prediction = model_adv.predict(final_features)
-
-    output = round(prediction[0], 2)
-
-    return render_template('adventure.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
-
 @app.route('/com')
 def com():
     '''
@@ -89,22 +109,32 @@ def comedy():
     '''
     For rendering results on HTML GUI
     '''
-    
+    error=None
     if request.method== 'POST':  
         dir_name=request.form.get('director_name')
-        dir_score=dir_com_dict[dir_name]
+        if(dir_name not in dir_com_dict):
+            error="Invalid Director name"
+            return render_template('comedy.html',error=error)
+        
         actor1_name= request.form.get('actor1_name')
-        actor1_score=actor1_com_dict[actor1_name]
+        if(actor1_name not in actor1_com_dict):
+            error="Invalid Lead actor 1 name"
+            return render_template('comedy.html',error=error)
+        
         actor2_name=request.form.get('actor2_name')
+        if(actor2_name not in actor2_com_dict):
+            error="Invalid Lead actor 2 name"
+            return render_template('comedy.html',error=error)
+        
+        dir_score=dir_com_dict[dir_name]    
+        actor1_score=actor1_com_dict[actor1_name]
         actor2_score=actor2_com_dict[actor2_name]
-    #actor_name1=request.args.get('test_score')
-   # actor_score1=actor1_dict.get(actor_name1,"0")       
-    final_features=np.array([[dir_score,actor1_score,actor2_score]])
-    prediction = model_com.predict(final_features)
-
-    output = round(prediction[0], 2)
-
-    return render_template('comedy.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+        final_features=np.array([[dir_score,actor1_score,actor2_score]])
+        prediction = model_com.predict(final_features)
+        output = round(prediction[0], 2)
+        return render_template('comedy.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+       
+        
 
 @app.route('/rom')
 def rom():
@@ -125,11 +155,11 @@ def romantic():
             error="Invalid Director name"
             return render_template('romantic.html',error=error)
         actor1_name= request.form.get('actor1_name')
-        if(dir_name not in actor1_rom_dict):
+        if(actor1_name not in actor1_rom_dict):
             error="Invalid Lead actor 1 name"
             return render_template('romantic.html',error=error)
         actor2_name=request.form.get('actor2_name')
-        if(dir_name not in actor2_rom_dict):
+        if(actor2_name not in actor2_rom_dict):
             error="Invalid Lead actor 2 name"
             return render_template('romantic.html',error=error)
         
