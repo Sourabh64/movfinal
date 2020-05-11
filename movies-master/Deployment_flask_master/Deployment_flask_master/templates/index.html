@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>IMDB Predictor</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -13,21 +13,23 @@
 </head>
 
 <body>
+ 
  <div class="login">
-<select id="dynamic_select" onchange="location=this.value;">
-    <option value="" selected>Genre</option>
-    <option value="/act">action</option>
-    <option value="/adv">adventure</option>
-    <option value="/com">Comedy</option>
-    <option value="/rom">Romantic</option>
+ <center>
+<h2> Select a genre for the movie</h2>
+<select class="inp" id="dynamic_select" onchange="location=this.value;">
+    <option value="" selected class="inp">Genre</option>
+    <option value="/act" class="inp">Action</option>
+    <option value="/adv" class="inp">Adventure</option>
+    <option value="/com" class="inp">Comedy</option>
+    <option value="/rom" class="inp">Romantic</option>
    
     
 </select>
-
+</center>
  </div>
 
 </body>
 
 
 </html>
-

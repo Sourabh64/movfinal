@@ -1,13 +1,15 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, flash, request, jsonify, render_template, redirect, url_for
 import pickle
 from model import dir_dict, actor1_dict, actor2_dict
 from model import dir_adv_dict, actor1_adv_dict, actor2_adv_dict
 from model import dir_com_dict, actor1_com_dict, actor2_com_dict
 from model import dir_rom_dict, actor1_rom_dict, actor2_rom_dict
+import logging
 
 
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 model = pickle.load(open('model1.pkl', 'rb'))
 model_adv = pickle.load(open('model2.pkl', 'rb'))
 model_com = pickle.load(open('model3.pkl', 'rb'))
@@ -116,22 +118,32 @@ def romantic():
     '''
     For rendering results on HTML GUI
     '''
-    
-    if request.method== 'POST':  
+    error=None
+    if request.method== 'POST': 
         dir_name=request.form.get('director_name')
-        dir_score=dir_rom_dict[dir_name]
+        if(dir_name not in dir_rom_dict):
+            error="Invalid Director name"
+            return render_template('romantic.html',error=error)
         actor1_name= request.form.get('actor1_name')
-        actor1_score=actor1_rom_dict[actor1_name]
+        if(dir_name not in actor1_rom_dict):
+            error="Invalid Lead actor 1 name"
+            return render_template('romantic.html',error=error)
         actor2_name=request.form.get('actor2_name')
-        actor2_score=actor2_rom_dict[actor2_name]
-    #actor_name1=request.args.get('test_score')
-   # actor_score1=actor1_dict.get(actor_name1,"0")       
-    final_features=np.array([[dir_score,actor1_score,actor2_score]])
-    prediction = model_rom.predict(final_features)
+        if(dir_name not in actor2_rom_dict):
+            error="Invalid Lead actor 2 name"
+            return render_template('romantic.html',error=error)
+        
 
-    output = round(prediction[0], 2)
-
-    return render_template('romantic.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+        dir_score=dir_rom_dict[dir_name]
+        actor1_score=actor1_rom_dict[actor1_name]
+        actor2_score=actor2_rom_dict[actor2_name]  
+        final_features=np.array([[dir_score,actor1_score,actor2_score]])
+        prediction = model_rom.predict(final_features)
+        output = round(prediction[0], 2)
+        return render_template('romantic.html', prediction_text='IMDB of the movie is estimated to be {}'.format(output))
+        
+    
+    
 
 
 @app.route('/predict_api',methods=['POST'])

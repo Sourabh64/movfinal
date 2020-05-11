@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
@@ -11,11 +12,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   
 </head>
-
 <body>
  <div class="login">
-<h1>IMDB Predictor</h1>
-
+<h1>IMDB Score Predictor</h1>
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{url_for('romantic')}}" method="post">
     	<input type="text" name="director_name" placeholder="Director Name" required="required" />
