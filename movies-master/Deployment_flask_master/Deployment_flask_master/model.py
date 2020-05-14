@@ -7,7 +7,7 @@ sns.set()
 import pickle
 from mpl_toolkits.mplot3d import Axes3D
 
-dataset = pd.read_excel(r'C:\Users\Mr.Kulakarni\Desktop\Final_Year_Project\Deployment_flask_master\Deployment_flask_master\movie_metadata1.xlsx')
+dataset = pd.read_excel(r'C:\Users\Admin\Documents\GitHub\movfinal\movfinal\movies-master\Deployment_flask_master\Deployment_flask_master\movie_metadata1.xlsx')
 
 dataset=dataset.drop(['num_critic_for_reviews','actor_3_name','country','actor_3_facebook_likes','num_user_for_reviews','budget','duration','content_rating','color','aspect_ratio','plot_keywords','facenumber_in_poster','cast_total_facebook_likes','movie_facebook_likes','movie_imdb_link'],axis=1)
 
