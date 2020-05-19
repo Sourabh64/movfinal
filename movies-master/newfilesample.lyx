@@ -297,7 +297,11 @@ textit {
 
 \end_inset
 
-Predicting the Conceptual Appeal of movies Using Data Analytics 
+Predicting the Conceptual Quality
+\begin_inset Formula $ $
+\end_inset
+
+ of movies Using Data Analytics 
 \begin_inset ERT
 status open
 
@@ -726,6 +730,39 @@ When interpreting the results of a multiple regression, beta coefficients
  an equation, or vertically in table form.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Downloads/multiple-linear-regression-35-638.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Multiple Linear regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Organization of the report
 \end_layout
@@ -768,9 +805,87 @@ The proposed solution for the problem is using data analytics.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (139).png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Block Diagram of The Proposed Solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The proposed solution has two phases – Training phase and Testing phase.
  The processing in each phase is shown as in fig.
  2.2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (140).png
+	scale 80
+	BoundingBox 0bp 0bp 367bp 421bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Phases in the Proposed Solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -809,6 +924,10 @@ Now, we have predicted for many actors as well as directors based on specific
  One can easily know who has directed the movie and the cast of the same.
 \end_layout
 
+\begin_layout Section
+System Characteristics 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
@@ -817,22 +936,20 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename 10.png
-	scale 80
-
-\end_inset
-
 
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (141).png
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Visible light reveals rich pigmentation details of an Iris by exciting melanin,
- the main colouring component in the iris.
+Use Case Diagram
 \end_layout
 
 \end_inset
@@ -840,13 +957,13 @@ Visible light reveals rich pigmentation details of an Iris by exciting melanin,
 
 \end_layout
 
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Section
-System Characteristics 
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1003,6 +1120,45 @@ System Overview
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (145).png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The overview of the system is represented in Fig.4.1.
  It shows the modules involved in building the system i.e,
 \end_layout
@@ -1033,6 +1189,45 @@ Software Architecture
 
 \begin_layout Subsection
 System Block Diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (147).jpg
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System Block Diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1067,6 +1262,45 @@ Data Flow Diagram
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (137).png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data Flow Diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 A data ﬂow diagram (DFD) is a graphical representation of the ﬂow of data
  through an information system.
  A DFD gives the preliminary overview of the system without going into great
@@ -1098,6 +1332,45 @@ A data ﬂow diagram (DFD) is a graphical representation of the ﬂow of data
 
 \begin_layout Subsection
 Sequence Diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (146).png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1155,6 +1428,44 @@ Implementation Details
 
 \begin_layout Subsection
 Organization of implementation files
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mr.Kulakarni/Pictures/Screenshots/Screenshot (147).png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Directory structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1307,8 +1618,16 @@ For training the model, the dataset is split into 80:20 ratios for training
 \end_layout
 
 \begin_layout Standard
-from sklearn.model_selection import train_test_split xTrain, xTest, yTrain,
- yTest = train_test_split(x, y, test_size = 0.2, random_state = 100) 
+
+\series bold
+from sklearn.model_selection import train_test_split 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size = 0.2, random_sta
+te = 100) 
 \end_layout
 
 \begin_layout Standard
@@ -1330,8 +1649,21 @@ The linear regression model can be obtained by imported from the sklearn
 \end_layout
 
 \begin_layout Standard
-from sklearn.linear_model import LinearRegression mlr_model= LinearRegression(fit
-_intercept=true) mlr_model.fit(x_train,y_train) 
+
+\series bold
+from sklearn.linear_model import LinearRegression 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+mlr_model= LinearRegression(fit_intercept=true) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+mlr_model.fit(x_train,y_train) 
 \end_layout
 
 \begin_layout Standard
@@ -1346,6 +1678,8 @@ model.py file consists of this code for model.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 python model.py
 \end_layout
 
@@ -1370,6 +1704,8 @@ The following code allows us to test the model on x_test values which we
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 predictions=mlr_model.predict(x_test)
 \end_layout
 
@@ -1382,6 +1718,667 @@ We have made a flask application for front end part of our predictive model.
  The webpages for our website are stored in templates file.
  The first page is index.html and it consists of a dropdown for selecting
  the genre.
+\end_layout
+
+\begin_layout Standard
+To display the user interface, we need a local host which can be started
+ by using the following command-
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+python app.py
+\end_layout
+
+\begin_layout Standard
+It provides a URL for the local host which can opened using a web browser.
+\end_layout
+
+\begin_layout Subsection
+User Interface
+\end_layout
+
+\begin_layout Standard
+The user interface consists of a flask application which is a website to
+ provide user friendly interface.
+ The source code for the web pages are present in the templates folder,
+ where index.html is the home page.
+\end_layout
+
+\begin_layout Standard
+The app.py folder consists of methods to render appropriate result and web
+ page by clicking on the predict button provided in all the pages.
+ 
+\end_layout
+
+\begin_layout Chapter
+Testing
+\end_layout
+
+\begin_layout Standard
+Testing is carried out with 20% of the dataset.
+ The accuracy of the IMDB score in the results and the prediction percentage
+ depends on the parameters considered and number of iterations for training.
+ The following cases describe the results on testing data for different
+ genres obtained from different parameters and iterations.
+\end_layout
+
+\begin_layout Section
+Testing on Training Dataset
+\end_layout
+
+\begin_layout Subsection
+Action genre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic1.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The target IMDB score is 6.7
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic2.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Adventure genre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic3.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The target IMDB score is 5.4
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic4.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Testing on Test Dataset
+\end_layout
+
+\begin_layout Subsection
+Comedy genre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic5.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The expected IMDB score is 5.9
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic6.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Romance genre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic7.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The target IMDB score is 5.9
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic8.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Experiments and Results
+\end_layout
+
+\begin_layout Standard
+The prediction percentage and the accuracy of the bounding boxes in the
+ results depends on the 
+\end_layout
+
+\begin_layout Standard
+1) Batch size i.e.
+ the size of the training and testing data
+\end_layout
+
+\begin_layout Standard
+2) Parameters considered
+\end_layout
+
+\begin_layout Section
+Training and Testing Data
+\end_layout
+
+\begin_layout Standard
+The dataset is split into two parts using the train_test_split imported
+ from scipy library.
+ Following code is used for this purpose-
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+from sklearn.model_selection import train_test_split
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size = 0.2, random_sta
+te = 100)
+\end_layout
+
+\begin_layout Standard
+The parameters considered are-
+\end_layout
+
+\begin_layout Standard
+• test_size — This parameter decides the size of the data that has to be
+ split as the test dataset.
+ This is given as a fraction.
+ For example, if we pass 0.5 as the value, the dataset will be split 50%
+ as the test dataset.
+\end_layout
+
+\begin_layout Standard
+• train_size — We have to specify this parameter only if we’re not specifying
+ the test_size.
+ This is the same as test_size, but instead we tell the class what percent
+ of the dataset we want to split as the training set.
+\end_layout
+
+\begin_layout Standard
+• random_state — Here we pass an integer, which will act as the seed for
+ the random number generator during the split.
+ We can also pass an instance of the RandomState class, which will become
+ the number generator.
+\end_layout
+
+\begin_layout Standard
+It splits the dataset into training data and testing data.
+ According to our algorithm, we split it as 80:20 that is 80% training data
+ and 20% testing data.
+ 
+\end_layout
+
+\begin_layout Section
+Parameters considered
+\end_layout
+
+\begin_layout Standard
+The parameters that we consider in the model play an important role in how
+ accurate the model will perform.
+ The relationship between the input variables and the output variables can
+ be seen using a heat map which shows the correlation between these variables.
+ Correlation is actually a numerical value between 0 and 1 which shows the
+ extent of relationship between two variables.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic9.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Heatmap showing the correlation between input and output variables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A dark blue gradient shows that there is a deep relationship between input
+ and output variables and lighter shades show less dependency.
+ Towards red color side, it shows a negative dependency.
+\end_layout
+
+\begin_layout Standard
+The parameters can also be considered based on the R2 score.
+ R2 score determines the accuracy of a model.
+ The value lies between 0 and 1.
+ A score between 0 to 0.5 shows that the model is not good, a score between
+ 0.5 to 0.8 shows that it is an average model and between 0.8 to 1 shows that
+ it is a good model.
+\end_layout
+
+\begin_layout Standard
+On considering the director and actor 1 and 2 average scores as input parameters
+, we found that for different genres, the R2 score was always between 0.8
+ to 1 indicating that these were the parameters actually affecting the output.
+\end_layout
+
+\begin_layout Section
+Experiment 
+\end_layout
+
+\begin_layout Standard
+We tested the failure case scenarios and showed error messages accordingly.
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ Typing the wrong Lead Actor 1 name
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic10.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+UI showing user inputs with wrong entry for lead actor 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Final_Year_Project/Final Project Report/Report pics/pic11.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+UI showing the appropriate error message
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Itemize
+The test size of 80-20 was considered as the optimal split for training
+ and testing data.
+\end_layout
+
+\begin_layout Itemize
+Parameters that gave the best R2 score were a combination of three variables-
+ director average score, actor 1 average score, actor2 average score.
+ Hence these three were considered for our multiple linear regression model.
+\end_layout
+
+\begin_layout Itemize
+Failure case scenarios showed error messages when user input any name that
+ was not present in the dataset.
+\end_layout
+
+\begin_layout Chapter
+Conclusion
+\end_layout
+
+\begin_layout Standard
+The proposed system is based on data analytics, to identify the parameters
+ affecting the conceptual quality of movies and predicting the IMDB score.
+ The objective of the proposed model is achieved using the following modules.
+\end_layout
+
+\begin_layout Standard
+1) Finding and modifying the dataset for the movie score predictor consisting
+ of around 5000 movies.
+ The Spyder software and python libraries like pandas and seaborn are used
+ to pre-process the data.
+\end_layout
+
+\begin_layout Standard
+2) The multiple linear regression model is designed using the python library
+ called scikit.
+ It consists of methods to train the dataset using the MLR model.
+ The model.py consists of the code to train the model.
+\end_layout
+
+\begin_layout Standard
+3) The model was trained on the dataset by splitting it in the ratios of
+ 80:20 as training and testing dataset respectively.
+ The weights are assigned to the parameters according to the training and
+ then the results are validated according to the testing dataset.
+\end_layout
+
+\begin_layout Standard
+5) The results showed the prediction of IMDB score for a movie when the
+ input parameters were input.
+ The model was able to predict on new data as well.
 \end_layout
 
 \begin_layout Bibliography
