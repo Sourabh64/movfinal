@@ -6,7 +6,7 @@ With increasing volumes and data types and piquing interest to use data to produ
 
 1. Install Anaconda 
 
-[Link] (https://www.anaconda.com/products/individual)
+    https://www.anaconda.com/products/individual
 
 2. Open Spyder in anaconda and create 3 files namely request.py, app.py and model.py
 
@@ -18,13 +18,13 @@ With increasing volumes and data types and piquing interest to use data to produ
 
 6. Create HTML files required to take input and display output.
 
-7.All these files along with dataset should be kept in a folder.
+7. All these files along with dataset should be kept in a folder.
 
 8. Now open Anaconda prompt and type 
     `python model.py`
 
 9. Next type
-`python app.py` 
+    `python app.py` 
 
 10. Now copy the link that is displayed after the localhost starts running.
 
