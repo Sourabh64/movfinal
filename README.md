@@ -17,6 +17,7 @@ https://www.anaconda.com/products/individual
 7.All these files along with dataset should be kept in a folder.
 
 8. Now open Anaconda prompt and type "python model.py" for the model to train.
+    `python model.py`
 
 9. Next type "python app.py" to run a localhost.
 
